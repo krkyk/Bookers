@@ -29,7 +29,7 @@ body{
 strong{
   font-weight:bold;
 }
-p{
+p,td{
   font-family:verdana, arial, helvetica, sans-serif;
   font-size:13px;
   line-height: 18px;
@@ -43,3 +43,43 @@ a:hover{
   color:#fff;
 }
 
+table{
+  display:table;
+  border-collapse: separate;
+  text-indent:initial;
+  border-spacing:2px;
+  border-color:gray;
+}
+thead{
+  display:table-header-group;
+  vertical-align:middle;
+  border-color:inherit;
+}
+tr{
+  display:table-row;
+  vertical-align:inherit;
+  border-color:inherit;
+}
+th{
+  display:table-cell;
+  vertical-align:inherit;
+  font-weight:bold;
+  text-align:center;
+  padding-bottom:5px;
+}
+tbody{
+  display:table-row-group;
+  vertical-align:middle;
+  border-color:inherit;
+}
+td{
+  display:table-cell;
+  vertical-align:inherit;
+  padding-bottom:7px;
+  padding-left:5px;
+  padding-right:5px;
+}
+.link-item:hover{
+  background-color:#000;
+  color:#fff;
+}
