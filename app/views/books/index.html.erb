@@ -22,17 +22,16 @@
 
 <h2>New book</h2>
 <%= form_with model:@book,url:"/books",method: :post do |f|%>
-<form class="new_book" id="new_book" action="/books" accept-charset="UTF-8" method="post">
   <div class="field">
-     <label for="book_title">Title</label>
-     <input type="text" name="book[title]" id="book_title">
+     <%=f.label :book_title,"Title"%><br>
+     <%=f.text_field :title%>
   </div>
   <div class="field">
-     <label for="book_body">Body</label>
-     <textarea type="text" name="book[body]" id="book_body"></textarea>
+     <%=f.label :book_body,"Body"%><br>
+     <%=f.text_area :body%>
   </div>
   <div class="action">
-     <input type="submit" name="commit" value="Create Book"　data-disable-with="Create Book">
+     <%=f.submit"Create Book"%>
   </div>
 </form>
 
