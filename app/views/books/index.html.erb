@@ -21,6 +21,18 @@
 </table>
 
 <h2>New book</h2>
+  <%if @book.errors.any?%>
+  <div class="error-message">
+    <div class="error-text"><%=@book.errors.count%>errors prohibited this book form being saved:</div>
+    
+      <ul>
+       <%@book.errors.full_messages.each do |message|%>
+       <li><%=message%></li>
+       <%end%>
+      </ul>
+  </div>
+  <%end%>
+  
 <%= form_with model:@book, url:books_path(@book.id),method: :post do |f|%>
   <div class="field">
      <%=f.label :book_title,"Title"%><br>
